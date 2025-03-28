@@ -13,7 +13,7 @@ plugins {
 }
 
 // Adventure version
-ext.adventure = "4.13.1"
+ext.adventure = "4.20.0-SNAPSHOT"
 
 group = 'net.kyori'
 version = '4.3.5-SNAPSHOT'
@@ -59,17 +59,17 @@ subprojects {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
   }
-  
-  tasks.withType(Javadoc).configureEach {
-    options {
-      links(
-        "https://jd.advntr.dev/api/$adventure",
-        "https://jd.advntr.dev/text-serializer-legacy/$adventure",
-        "https://jd.advntr.dev/text-serializer-gson/$adventure",
-        "https://jd.advntr.dev/nbt/$adventure"
-      )
-    }
-  }
+
+//  tasks.withType(Javadoc).configureEach {
+//    options {
+//      links(
+//        "https://jd.advntr.dev/api/$adventure",
+//        "https://jd.advntr.dev/text-serializer-legacy/$adventure",
+//        "https://jd.advntr.dev/text-serializer-gson/$adventure",
+//        "https://jd.advntr.dev/nbt/$adventure"
+//      )
+//    }
+//  }
 
   indra {
     javaVersions {
@@ -110,7 +110,7 @@ subprojects {
       }
     }
   }
-  
+
   indraCrossdoc {
       baseUrl().set(providers.gradleProperty('javadocPublishRoot'))
       nameBasedDocumentationUrlProvider {
