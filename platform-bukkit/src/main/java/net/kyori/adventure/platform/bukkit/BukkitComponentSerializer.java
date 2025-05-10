@@ -68,6 +68,7 @@ public final class BukkitComponentSerializer {
     } else {
       GSON_SERIALIZER = GsonComponentSerializer.builder()
               .legacyHoverEventSerializer(NBTLegacyHoverEventSerializer.get())
+              .options(JSONOptions.byDataVersion().at(0))
               .build();
     }
 
